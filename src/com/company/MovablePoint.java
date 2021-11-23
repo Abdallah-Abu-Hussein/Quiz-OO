@@ -30,7 +30,9 @@ public class MovablePoint extends Point{
         this.ySpeed = ySpeed;
     }
     public void Move(){
-
+        Point MyPoint = new Point(getX(),getY());
+        setY(getY()+ySpeed);
+        setX(getX()+xSpeed);
 
     }
 
