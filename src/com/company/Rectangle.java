@@ -11,12 +11,17 @@ public class Rectangle {
     }
 
     public Point getRightCorner(){
-        Point MyPoint = new Point();
-        corner.setX(MyPoint.getX()+this.length);
-        corner.setY(MyPoint.getY()+this.width);
-        return corner;
+
+        Point MyPoint = new Point(this.corner.getX(),this.corner.getY());
+        MyPoint.setX(MyPoint.getX()+ this.length);
+//        System.out.println("my X "+MyPoint.getX()+" " + this.length);
+        MyPoint.setY(MyPoint.getY() + this.width);
+//        System.out.println("my y "+MyPoint.getY());
+        return MyPoint;
     }
-    public void Operation1(){};
+    public void Operation1(){
+        this.corner.setX(corner.getX()+1);
+    };
     public Point getCorner() {
         return corner;
     }
